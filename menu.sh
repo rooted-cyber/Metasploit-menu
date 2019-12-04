@@ -206,7 +206,7 @@ metasploit () {
 			maro="sleep"
 			kya="apt"
 			smjhe="update"
-			hoga="ap"
+			hoga="apt install"
 			saf="clear"
 			nhi="upgrade"
 			$ll$i$k$h $o "$nn"
