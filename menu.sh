@@ -1,4 +1,7 @@
-serveo () {
+fol() {
+	cd ~/Metasploit-Menu
+	}
+	serveo () {
 	clear
 	ll="e"
 	i="c"
@@ -128,6 +131,14 @@ ngrok () {
 	read
 	payload
 	}
+	p-p() {
+		fol
+		bash python.sh
+		}
+		ph-p() {
+			fol
+			bash php.sh
+			}
 	payload () {
 		clear
 	ll="e"
@@ -147,12 +158,16 @@ ngrok () {
 	bb="	$lal [ 2 ]$pila Using serveo.net"
 	cc="	$lal [ 3 ]$pila Using Ip"
 	ccc="	$lal [ 4 ]$pila Without LHOST and LPORT"
-	dd="	$lal [ 5 ]$pila Home"
-	ee="	$lal [ 6 ]$pila Exit"
+	dd="	$lal [ 7 ]$pila Home"
+	ee="	$lal [ 8 ]$pila Exit"
+	ddd="	$lal [ 5 ]$pila python payload"
+	eee="	$lal [ 6 ]$pila php payload"
 	$ll$i$k$h $o "$aa"
 	$ll$i$k$h $o "$bb"
 	$ll$i$k$h $o "$cc"
 	$ll$i$k$h $o "$ccc"
+	$ll$i$k$h $o "$ddd"
+	$ll$i$k$h $o "$eee"
 	$ll$i$k$h $o "$dd"
 	$ll$i$k$h $o "$ee"
 	$ll$i$k$h
@@ -163,8 +178,10 @@ ngrok () {
 	2)serveo ;;
 	3)ips ;;
 	4)without ;;
-	5)msf-s ;;
-	6)exit 0
+	5)p-p ;;
+	6)ph-p ;;
+	7)msf-s ;;
+	8)exit 0
 	esac
 	}
 metasploit () {
