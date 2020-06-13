@@ -1,5 +1,5 @@
 fol() {
-	cd ~/Metasploit-Menu
+	cd ~/Metasploit-menu
 	}
 	serveo () {
 	clear
